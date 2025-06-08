@@ -12,12 +12,6 @@ public interface CartMapper {
             "LEFT JOIN business b ON c.businessId = b.businessId " +
             "WHERE c.userId = #{userId}")
     @Results({
-            @Result(property = "cartId", column = "cartId"),
-            @Result(property = "foodId", column = "foodId"),
-            @Result(property = "businessId", column = "businessId"),
-            @Result(property = "userId", column = "userId"),
-            @Result(property = "quantity", column = "quantity"),
-
             @Result(property = "food.foodId", column = "food_foodId"),
             @Result(property = "food.foodName", column = "foodName"),
             @Result(property = "food.foodExplain", column = "foodExplain"),
