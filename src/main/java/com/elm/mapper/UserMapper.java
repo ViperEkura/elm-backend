@@ -15,5 +15,5 @@ public interface UserMapper {
     User getUserById(String userId);
 
     @Select("SELECT * FROM user WHERE userId = #{userId} AND password = #{password}")
-    User getUserByIdByPass(@Param("userId") String userId, @Param("password") String password);
+    User getUserByIdByPass( String userId,  String password);
 }
